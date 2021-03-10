@@ -12,8 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-//#include "ros2_control_demo_driver/robot6dof_demo_system.hpp"
-#include "ros2_control_kuka_demo_driver/kuka_system_position_only.hpp"
+#include "ros2_control_kuka_driver/kuka_system_position_only.hpp"
 
 #include <thread>
 #include <chrono>
@@ -28,7 +27,7 @@
 using namespace std::chrono_literals;
 
 
-namespace ros2_control_kuka_demo_driver
+namespace ros2_control_kuka_driver
 {
 
 return_type KukaSystemPositionOnlyHardware::configure(const hardware_interface::HardwareInfo &info)
@@ -222,13 +221,13 @@ return_type KukaSystemPositionOnlyHardware::write()
 
 
 
-} //namespace ros2_control_kuka_demo_driver
+} //namespace ros2_control_kuka_driver
 
 
 #include "pluginlib/class_list_macros.hpp"
 
 PLUGINLIB_EXPORT_CLASS(
-	ros2_control_kuka_demo_driver::KukaSystemPositionOnlyHardware,
+	ros2_control_kuka_driver::KukaSystemPositionOnlyHardware,
 	hardware_interface::SystemInterface
 )
 

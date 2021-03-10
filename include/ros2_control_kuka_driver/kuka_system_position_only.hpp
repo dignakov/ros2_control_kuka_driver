@@ -1,5 +1,5 @@
-#ifndef ROS2_CONTROL_KUKA_DEMO_DRIVER__KUKA_SYSTEM_POSITION_HPP_
-#define ROS2_CONTROL_KUKA_DEMO_DRIVER__KUKA_SYSTEM_POSITION_HPP_
+#ifndef ROS2_CONTROL_KUKA_DRIVER__KUKA_SYSTEM_POSITION_HPP_
+#define ROS2_CONTROL_KUKA_DRIVER__KUKA_SYSTEM_POSITION_HPP_
 
 #include <memory>
 #include <string>
@@ -15,7 +15,7 @@
 #include "hardware_interface/hardware_info.hpp"
 #include "hardware_interface/types/hardware_interface_return_values.hpp"
 #include "hardware_interface/types/hardware_interface_status_values.hpp"
-#include "ros2_control_kuka_demo_driver/visibility_control.h"
+#include "ros2_control_kuka_driver/visibility_control.h"
 
 #include "kuka_rsi_hw_interface/udp_server.h"
 #include "kuka_rsi_hw_interface/rsi_state.h"
@@ -24,7 +24,7 @@
 
 using hardware_interface::return_type;
 
-namespace ros2_control_kuka_demo_driver
+namespace ros2_control_kuka_driver
 {
 
 class KukaSystemPositionOnlyHardware : public hardware_interface::BaseInterface<hardware_interface::SystemInterface>
@@ -32,25 +32,25 @@ class KukaSystemPositionOnlyHardware : public hardware_interface::BaseInterface<
 public:
 	RCLCPP_SHARED_PTR_DEFINITIONS(KukaSystemPositionOnlyHardware);
 
-	ROS2_CONTROL_DEMO_DRIVER_PUBLIC
+	ROS2_CONTROL_DRIVER_PUBLIC
 	return_type configure(const hardware_interface::HardwareInfo & info) override;
 
-	ROS2_CONTROL_DEMO_DRIVER_PUBLIC
+	ROS2_CONTROL_DRIVER_PUBLIC
 	std::vector<hardware_interface::StateInterface> export_state_interfaces() override;
 
-	ROS2_CONTROL_DEMO_DRIVER_PUBLIC
+	ROS2_CONTROL_DRIVER_PUBLIC
 	std::vector<hardware_interface::CommandInterface> export_command_interfaces() override;
 
-	ROS2_CONTROL_DEMO_DRIVER_PUBLIC
+	ROS2_CONTROL_DRIVER_PUBLIC
 	return_type start() override;
 
-	ROS2_CONTROL_DEMO_DRIVER_PUBLIC
+	ROS2_CONTROL_DRIVER_PUBLIC
 	return_type stop() override;
 
-	ROS2_CONTROL_DEMO_DRIVER_PUBLIC
+	ROS2_CONTROL_DRIVER_PUBLIC
 	return_type read() override;
 
-	ROS2_CONTROL_DEMO_DRIVER_PUBLIC
+	ROS2_CONTROL_DRIVER_PUBLIC
 	return_type write() override;
 
 private:
@@ -85,6 +85,6 @@ private:
 
 };
 
-}  // namespace ros2_control_abb_demo_hardware
+}  // namespace ros2_control_abb_hardware
 
-#endif  // ROS2_CONTROL_DEMO_DRIVER__RRBOT_SYSTEM_POSITION_ONLY_HPP_
+#endif  // ROS2_CONTROL_DRIVER__RRBOT_SYSTEM_POSITION_ONLY_HPP_

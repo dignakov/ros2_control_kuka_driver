@@ -1,0 +1,9 @@
+repositories:
+  kuka_experimental:
+    type: git
+    url: git@github.com:dignakov/kuka_experimental.git
+    version: ros2-foxy
+  ros2_control_kuka_driver:
+    type: git
+    url: git@github.com:dignakov/ros2_control_kuka_driver.git
+    version: master

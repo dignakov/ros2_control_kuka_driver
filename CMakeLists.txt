@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(ros2_control_kuka_demo_driver)
+project(ros2_control_kuka_driver)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -49,7 +49,7 @@ ament_target_dependencies(
 )
 
 pluginlib_export_plugin_description_file(hardware_interface
-										 ros2_control_kuka_demo_driver.xml)
+										 ros2_control_kuka_driver.xml)
 
 
 install(
