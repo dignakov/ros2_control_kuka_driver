@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<robot name="kuka_kr6" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find kuka_kr6_support)/urdf/kr6r900sixx_macro.xacro" />
+  <xacro:include filename="kuka_6dof_system_position_only.ros2_control.xacro"/>
+  <xacro:kuka_kr6r900sixx prefix=""/>
+  <xacro:robot6dof_system_position_only name="KukaSystemPositionOnlyHardware" prefix=""/>
+</robot>

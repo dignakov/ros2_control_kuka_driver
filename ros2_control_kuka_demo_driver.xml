@@ -1,0 +1,9 @@
+<library path="ros2_control_kuka_demo_driver">
+  <class name="ros2_control_kuka_demo_driver/KukaSystemPositionOnlyHardware"
+         type="ros2_control_kuka_demo_driver::KukaSystemPositionOnlyHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+		ROS2 Control Kuka demo driver.
+    </description>
+  </class>
+</library>
