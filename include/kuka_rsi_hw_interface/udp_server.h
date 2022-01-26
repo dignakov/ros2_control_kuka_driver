@@ -154,7 +154,7 @@ public:
       }
     }
 
-    buffer = std::string(buffer_);
+    buffer = std::string(buffer_); //this probably allocates, use string.assign()?
 
     return bytes;
   }
