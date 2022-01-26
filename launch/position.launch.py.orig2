@@ -20,7 +20,7 @@ def generate_launch_description():
 
     rrbot_forward_controller = os.path.join(
         get_package_share_directory('ros2_control_kuka_driver'),
-        'config',
+        'controllers',
         'kuka_6dof_controller_position.yaml'
         )
 
