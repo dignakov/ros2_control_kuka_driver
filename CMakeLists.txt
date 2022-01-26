@@ -62,7 +62,7 @@ install(
 )
 
 install(
-  DIRECTORY controllers description launch/
+  DIRECTORY config description launch/
   DESTINATION share/${PROJECT_NAME}
 )
 
