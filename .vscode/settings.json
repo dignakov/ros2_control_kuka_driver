@@ -1,0 +1,16 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/airobo/ros2_ws/build/milking_robot_support",
+        "/home/airobo/ros2_ws/install/milking_robot_support/lib/python3.10/site-packages",
+        "/home/airobo/ros2_ws/build/kuka_kr210_arm",
+        "/home/airobo/ros2_ws/install/kuka_kr210_arm/lib/python3.10/site-packages",
+        "/home/airobo/ros2_ws/build/kuka_kr20_arm",
+        "/home/airobo/ros2_ws/install/kuka_kr20_arm/lib/python3.10/site-packages",
+        "/home/airobo/ros2_ws/build/crs_urdf_support",
+        "/home/airobo/ros2_ws/install/crs_urdf_support/lib/python3.10/site-packages",
+        "/home/airobo/ros2_ws/build/big_bazu",
+        "/home/airobo/ros2_ws/install/big_bazu/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

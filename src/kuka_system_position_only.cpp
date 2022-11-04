@@ -205,13 +205,17 @@ CallbackReturn KukaSystemPositionOnlyHardware::on_deactivate(const rclcpp_lifecy
 }
 
 //WARN: NOT REAL TIME SAFE due to strings/possible allocations
-return_type KukaSystemPositionOnlyHardware::read()
+// return_type KukaSystemPositionOnlyHardware::read()
+hardware_interface::return_type KukaSystemPositionOnlyHardware::read(
+  const rclcpp::Time & /*time*/,
+  const rclcpp::Duration & /*period*/)
 {
 	RCLCPP_INFO(rclcpp::get_logger("KukaSystemPositionOnlyHardware"), "read()");
 
 	in_buffer_.resize(1024);             //FIXME:
 	if (server_->recv(in_buffer_) == 0){ //FIXME: server_->recv is probably doing some allocation
-		return return_type::ERROR;
+		// return return_type::ERROR;
+		return hardware_interface::return_type::ERROR;
 	}
 
 	rsi_state_ = kuka_rsi_hw_interface::RSIState(in_buffer_);
@@ -222,10 +226,12 @@ return_type KukaSystemPositionOnlyHardware::read()
   	}
 	ipoc_ = rsi_state_.ipoc;
 
-	return return_type::OK;
+	return hardware_interface::return_type::OK;
 }
 
-return_type KukaSystemPositionOnlyHardware::write()
+hardware_interface::return_type KukaSystemPositionOnlyHardware::write(
+  const rclcpp::Time & /*time*/,
+  const rclcpp::Duration & /*period*/)
 {
 	RCLCPP_INFO(rclcpp::get_logger("KukaSystemPositionOnlyHardware"), "write()");
 
@@ -238,7 +244,7 @@ return_type KukaSystemPositionOnlyHardware::write()
 	out_buffer_ = kuka_rsi_hw_interface::RSICommand(rsi_joint_position_corrections_, ipoc_).xml_doc;
 	server_->send(out_buffer_);
 
-	return return_type::OK;
+	return hardware_interface::return_type::OK;
 }
 
 
